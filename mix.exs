@@ -7,7 +7,9 @@ defmodule MapKeys.MixProject do
       version: "0.1.0",
       elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      package: package()
+
     ]
   end
 
@@ -26,4 +28,19 @@ defmodule MapKeys.MixProject do
       {:proper_case, "~> 1.0"}
     ]
   end
+
+    defp package do
+    [
+      name: :map_keys,
+      files: ["lib", "mix.exs", "README*", "LICENSE*"],
+      maintainers: ["ontofractal"],
+      description:
+        "Unsurprisingly, MapKeys is a module for manipulation of map keys",
+      licenses: ["MIT"],
+      links: %{
+        "GitHub" => "https://github.com/ontofractal/map_keys"
+      }
+    ]
+  end
+
 end
